@@ -21,6 +21,10 @@ sudo rm -f /etc/systemd/system/2mic_leds.service
 sudo rm -f /etc/systemd/system/snapclient.service
 sudo systemctl daemon-reload
 
+# Removing created directories with sudo to handle permission issues
+echo "Removing created directories..."
+sudo rm -rf ~/SSV-Setup ~/wyoming-satellite ~/wyoming-openwakeword ~/wyoming-enhancements
+
 # Remove directories created by SSV setup
 echo "Removing created directories..."
 rm -rf ~/wyoming-satellite
